@@ -29,7 +29,7 @@ def weak_learner(temp_X, temp_y, D):
     return theta_star, j_star
 
 
-def adaboost(temp_X, temp_y, adaboost_t):
+def adaboost(temp_X, temp_y, adaboost_t=1):
     m, d = temp_X.shape
     D = np.array([1 / m for i in range(m)])
     weak_learners, errors, weights = [], [], []
